@@ -1,0 +1,25 @@
+# Python virtual environment
+venv/
+.venv/
+env/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Git repository metadata
+.git/
+.gitignore
+
+# Docker configurations
+docker-compose.yml
+Dockerfile*
+
+# Data storage and local logs
+qdrant_storage/
+*.log
+
+# Sensitive credentials/local env
+.env

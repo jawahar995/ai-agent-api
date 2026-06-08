@@ -1,0 +1,21 @@
+# Use the official stable Qdrant release as the base image
+FROM qdrant/qdrant:v1.10.1
+
+# Expose ports
+# 6333: REST API
+# 6334: gRPC API
+EXPOSE 6333
+EXPOSE 6334
+
+# Create directory for storage
+RUN mkdir -p /qdrant/storage
+
+# Set configuration directory and environment defaults
+# Disable telemetry (optional, standard production recommendation)
+ENV QDRANT__TELEMETRY_DISABLED=true
+
+# Keep data persistent in Docker volumes
+VOLUME ["/qdrant/storage"]
+
+# Command to run Qdrant
+CMD ["./qdrant"]

@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  qdrant:
+    build:
+      context: .
+      dockerfile: Dockerfile.qdrant
+    container_name: qdrant_db
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - ./qdrant_storage:/qdrant/storage
+    environment:
+      - QDRANT__TELEMETRY_DISABLED=true
+      - QDRANT__SERVICE__API_KEY=a91bdca50df5ba016c6ba1d02a4f72bd823defe4fb0b9af3b0e5a260e059c55d
+    restart: unless-stopped
+  agent_api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: agent_api
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    depends_on:
+      - qdrant
+    env_file:
+      - .env  
+    environment:
+      - VECTOR_STORE_URL=qdrant
+  agent_worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    container_name: agent_worker
+    restart: unless-stopped
+    env_file:
+      - .env  
+    environment:
+      - VECTOR_STORE_URL=qdrant
+    depends_on:
+      - qdrant  

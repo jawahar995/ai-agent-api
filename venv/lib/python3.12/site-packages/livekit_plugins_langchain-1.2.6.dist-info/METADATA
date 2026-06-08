@@ -1,0 +1,61 @@
+Metadata-Version: 2.4
+Name: livekit-plugins-langchain
+Version: 1.2.6
+Summary: LangChain/LangGraph plugin for LiveKit agents
+Project-URL: Documentation, https://docs.livekit.io
+Project-URL: Website, https://livekit.io/
+Project-URL: Source, https://github.com/livekit/agents
+Author-email: LiveKit <hello@livekit.io>
+License-Expression: Apache-2.0
+Keywords: LangChain,LangGraph,agents,livekit
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.9.0
+Requires-Dist: langchain-core>=0.3.0
+Requires-Dist: langgraph>=0.3.0
+Requires-Dist: livekit-agents>=1.2.6
+Description-Content-Type: text/markdown
+
+# LangChain plugin for LiveKit Agents
+
+This plugin integrates capabilites from LangChain within LiveKit Agents
+
+## Installation
+
+```bash
+pip install livekit-plugins-langchain
+```
+
+## Usage
+
+### Using LangGraph workflows
+
+You can bring over any existing workflow in LangGraph as an Agents LLM with `langchain.LLMAdapter`. For example:
+
+```python
+from langgraph.graph import StateGraph
+from livekit.agents import Agent, AgentSession, JobContext
+from livekit.plugins import langchain
+
+...
+
+def entrypoint(ctx: JobContext):
+    graph = StateGraph(...).compile()
+
+    session = AgentSession(
+        vad=...,
+        stt=...,
+        tts=...,
+    )
+
+    await session.start(
+        agent=Agent(llm=langchain.LLMAdapter(graph)),
+    )
+    ...
+```

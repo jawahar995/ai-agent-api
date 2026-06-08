@@ -14,7 +14,16 @@ livekit-agents==1.2.6
 livekit-plugins-deepgram==1.2.6
 livekit-plugins-langchain==1.2.6
 livekit-plugins-openai==1.2.6
+langchain-google-genai
 livekit-plugins-silero==1.2.6
 python-docx
 openpyxl
 pypdf
+motor==3.6.0
+pydantic-settings==2.6.1
+python-multipart
+livekit-plugins-aws
+qdrant-client
+langchain-qdrant
+pymysql
+langchain-text-splitters

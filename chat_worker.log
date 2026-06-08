@@ -1,0 +1,311 @@
+Starting LiveKit CHAT agent worker...
+2026-05-26 16:48:13,843 - [36mDEBUG[0m asyncio - Using selector: EpollSelector [90m[0m
+2026-05-26 16:48:13,845 - [35mDEV [0m livekit.agents - Watching /home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/src/agents [90m[0m
+2026-05-26 16:48:18,004 - [36mDEBUG[0m asyncio - Using selector: EpollSelector [90m[0m
+2026-05-26 16:48:18,009 - [32mINFO[0m livekit.agents - starting worker [90m{"version": "1.2.6", "rtc-version": "1.1.8"}[0m
+2026-05-26 16:48:18,009 - [32mINFO[0m livekit.agents - preloading plugins [90m{"packages": ["livekit.plugins.openai", "livekit.plugins.deepgram", "livekit.plugins.silero", "livekit.plugins.langchain", "av"]}[0m
+2026-05-26 16:48:18,553 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_rtfGZjFentvb", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
+2026-05-26 16:48:57,226 - [32mINFO[0m livekit.agents - received job request [90m{"job_id": "AJ_eWbEDURdsQzi", "dispatch_id": "AD_mL8L9L83LwU2", "room_name": "chat-test-room", "agent_name": "chat-agent", "resuming": false}[0m
+2026-05-26 16:48:58,902 - [32mINFO[0m livekit.agents - initializing process [90m{"pid": 46703}[0m
+2026-05-26 16:49:01,931 - [32mINFO[0m livekit.agents - process initialized [90m{"pid": 46703, "elapsed_time": 3.03}[0m
+2026-05-26 16:49:01,930 - [36mDEBUG[0m asyncio - Using selector: EpollSelector [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:05,766 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Starting topology monitoring"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:05,767 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "previousDescription": "<TopologyDescription id: 6a1581a9cc23930734b05c7f, topology_type: Unknown, servers: []>", "newDescription": "<TopologyDescription id: 6a1581a9cc23930734b05c7f, topology_type: Unknown, servers: [<ServerDescription ('157.20.51.194', 27017) server_type: Unknown, rtt: None>]>", "message": "Topology description changed"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:05,767 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "serverHost": "157.20.51.194", "serverPort": 27017, "message": "Starting server monitoring"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:05,769 - [36mDEBUG[0m pymongo.connection - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Connection pool created", "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:05,772 - [36mDEBUG[0m pymongo.serverSelection - {"message": "Server selection started", "selector": "<function writable_server_selector at 0x7a9be19f9300>", "operation": "insert", "topologyDescription": "<TopologyDescription id: 6a1581a9cc23930734b05c7f, topology_type: Unknown, servers: [<ServerDescription ('157.20.51.194', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6a1581a9cc23930734b05c7f"}} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:05,772 - [36mDEBUG[0m pymongo.serverSelection - {"message": "Waiting for suitable server to become available", "selector": "<function writable_server_selector at 0x7a9be19f9300>", "operation": "insert", "topologyDescription": "<TopologyDescription id: 6a1581a9cc23930734b05c7f, topology_type: Unknown, servers: [<ServerDescription ('157.20.51.194', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "remainingTimeMS": 29} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:05,813 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "driverConnectionId": 1, "serverHost": "157.20.51.194", "serverPort": 27017, "awaited": false, "message": "Server heartbeat started"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:05,856 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "driverConnectionId": 1, "serverConnectionId": 23242, "serverHost": "157.20.51.194", "serverPort": 27017, "awaited": false, "durationMS": 42.33786099939607, "reply": "{\"helloOk\": true, \"ismaster\": true, \"topologyVersion\": {\"processId\": {\"$oid\": \"696e15e23608b0816d01ca77\"}}, \"maxBsonObjectSize\": 16777216, \"maxMessageSizeBytes\": 48000000, \"maxWriteBatchSize\": 100000, \"localTime\": {\"$date\": \"2026-05-26T11:22:24.404Z\"}, \"logicalSessionTimeoutMinutes\": 30, \"connectionId\": 23242, \"maxWireVersion\": 17, \"ok\": 1.0}", "message": "Server heartbeat succeeded"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:05,857 - [36mDEBUG[0m pymongo.connection - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Connection pool ready", "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:05,858 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "previousDescription": "<TopologyDescription id: 6a1581a9cc23930734b05c7f, topology_type: Unknown, servers: [<ServerDescription ('157.20.51.194', 27017) server_type: Unknown, rtt: None>]>", "newDescription": "<TopologyDescription id: 6a1581a9cc23930734b05c7f, topology_type: Single, servers: [<ServerDescription ('157.20.51.194', 27017) server_type: Standalone, rtt: 0.04233786099939607>]>", "message": "Topology description changed"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:05,858 - [36mDEBUG[0m pymongo.serverSelection - {"message": "Server selection succeeded", "selector": "<function writable_server_selector at 0x7a9be19f9300>", "operation": "insert", "topologyDescription": "<TopologyDescription id: 6a1581a9cc23930734b05c7f, topology_type: Single, servers: [<ServerDescription ('157.20.51.194', 27017) server_type: Standalone, rtt: 0.04233786099939607>]>", "clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:05,859 - [36mDEBUG[0m pymongo.connection - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Connection checkout started", "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:05,859 - [36mDEBUG[0m pymongo.connection - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Connection created", "serverHost": "157.20.51.194", "serverPort": 27017, "driverConnectionId": 1} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:05,859 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "driverConnectionId": 1, "serverConnectionId": 23242, "serverHost": "157.20.51.194", "serverPort": 27017, "awaited": true, "message": "Server heartbeat started"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:06,078 - [36mDEBUG[0m pymongo.connection - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Connection ready", "serverHost": "157.20.51.194", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 0.14291957200111938} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:06,078 - [36mDEBUG[0m pymongo.connection - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Connection checked out", "serverHost": "157.20.51.194", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 0.21925538000141387} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:06,079 - [36mDEBUG[0m pymongo.command - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Command started", "command": "{\"insert\": \"history_masters\", \"ordered\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"w2/WH+23TwWJIVAz64OHNA==\", \"subType\": \"04\"}}}, \"$db\": \"ai-agnet\", \"documents\": [{\"session_id\": \"RM_qmCePwLiyAJ2\", \"user_id\": \"WebClient\", \"agent_type\": \"chat\", \"created_at\": {\"$date\": \"2026-05-26T11:19:05.763Z\"}, \"_id\": {\"$oid\": \"6a1581a9cc23930734b05c80\"}}]}", "commandName": "insert", "databaseName": "ai-agnet", "requestId": 1963267421, "operationId": 1963267421, "driverConnectionId": 1, "serverConnectionId": 23244, "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:06,158 - [36mDEBUG[0m pymongo.command - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Command succeeded", "durationMS": 79.8, "reply": "{\"n\": 1, \"ok\": 1.0}", "commandName": "insert", "databaseName": "ai-agnet", "requestId": 1963267421, "operationId": 1963267421, "driverConnectionId": 1, "serverConnectionId": 23244, "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:06,159 - [36mDEBUG[0m pymongo.connection - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Connection checked in", "serverHost": "157.20.51.194", "serverPort": 27017, "driverConnectionId": 1} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:15,908 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "driverConnectionId": 1, "serverConnectionId": 23242, "serverHost": "157.20.51.194", "serverPort": 27017, "awaited": true, "durationMS": 10048.376085997006, "reply": "{\"isWritablePrimary\": true, \"topologyVersion\": {\"processId\": {\"$oid\": \"696e15e23608b0816d01ca77\"}}, \"maxBsonObjectSize\": 16777216, \"maxMessageSizeBytes\": 48000000, \"maxWriteBatchSize\": 100000, \"localTime\": {\"$date\": \"2026-05-26T11:22:34.458Z\"}, \"logicalSessionTimeoutMinutes\": 30, \"connectionId\": 23242, \"maxWireVersion\": 17, \"ok\": 1.0}", "message": "Server heartbeat succeeded"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:15,909 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "driverConnectionId": 1, "serverConnectionId": 23242, "serverHost": "157.20.51.194", "serverPort": 27017, "awaited": true, "message": "Server heartbeat started"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:26,000 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "driverConnectionId": 1, "serverConnectionId": 23242, "serverHost": "157.20.51.194", "serverPort": 27017, "awaited": true, "durationMS": 10090.005332000146, "reply": "{\"isWritablePrimary\": true, \"topologyVersion\": {\"processId\": {\"$oid\": \"696e15e23608b0816d01ca77\"}}, \"maxBsonObjectSize\": 16777216, \"maxMessageSizeBytes\": 48000000, \"maxWriteBatchSize\": 100000, \"localTime\": {\"$date\": \"2026-05-26T11:22:44.468Z\"}, \"logicalSessionTimeoutMinutes\": 30, \"connectionId\": 23242, \"maxWireVersion\": 17, \"ok\": 1.0}", "message": "Server heartbeat succeeded"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:26,001 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "driverConnectionId": 1, "serverConnectionId": 23242, "serverHost": "157.20.51.194", "serverPort": 27017, "awaited": true, "message": "Server heartbeat started"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:27,002 - [36mDEBUG[0m pymongo.serverSelection - {"message": "Server selection started", "selector": "<function writable_server_selector at 0x7a9be19f9300>", "operation": "update", "topologyDescription": "<TopologyDescription id: 6a1581a9cc23930734b05c7f, topology_type: Single, servers: [<ServerDescription ('157.20.51.194', 27017) server_type: Standalone, rtt: 0.04144431143926341>]>", "clientId": {"$oid": "6a1581a9cc23930734b05c7f"}} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:27,002 - [36mDEBUG[0m pymongo.serverSelection - {"message": "Server selection succeeded", "selector": "<function writable_server_selector at 0x7a9be19f9300>", "operation": "update", "topologyDescription": "<TopologyDescription id: 6a1581a9cc23930734b05c7f, topology_type: Single, servers: [<ServerDescription ('157.20.51.194', 27017) server_type: Standalone, rtt: 0.04144431143926341>]>", "clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:27,003 - [36mDEBUG[0m pymongo.connection - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Connection checkout started", "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:27,003 - [36mDEBUG[0m pymongo.connection - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Connection checked out", "serverHost": "157.20.51.194", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 0.00015930099834804423} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:27,003 - [36mDEBUG[0m pymongo.command - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Command started", "command": "{\"update\": \"history_masters\", \"ordered\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"w2/WH+23TwWJIVAz64OHNA==\", \"subType\": \"04\"}}}, \"$db\": \"ai-agnet\", \"updates\": [{\"q\": {\"_id\": {\"$oid\": \"6a1581a9cc23930734b05c80\"}}, \"u\": {\"$set\": {\"user_id\": \"WebClient\"}}}]}", "commandName": "update", "databaseName": "ai-agnet", "requestId": 583497481, "operationId": 583497481, "driverConnectionId": 1, "serverConnectionId": 23244, "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:27,054 - [36mDEBUG[0m pymongo.command - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Command succeeded", "durationMS": 50.955, "reply": "{\"n\": 1, \"ok\": 1.0}", "commandName": "update", "databaseName": "ai-agnet", "requestId": 583497481, "operationId": 583497481, "driverConnectionId": 1, "serverConnectionId": 23244, "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:27,055 - [36mDEBUG[0m pymongo.connection - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Connection checked in", "serverHost": "157.20.51.194", "serverPort": 27017, "driverConnectionId": 1} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:29,057 - [36mDEBUG[0m pymongo.serverSelection - {"message": "Server selection started", "selector": "<function writable_server_selector at 0x7a9be19f9300>", "operation": "insert", "topologyDescription": "<TopologyDescription id: 6a1581a9cc23930734b05c7f, topology_type: Single, servers: [<ServerDescription ('157.20.51.194', 27017) server_type: Standalone, rtt: 0.04144431143926341>]>", "clientId": {"$oid": "6a1581a9cc23930734b05c7f"}} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:29,057 - [36mDEBUG[0m pymongo.serverSelection - {"message": "Server selection succeeded", "selector": "<function writable_server_selector at 0x7a9be19f9300>", "operation": "insert", "topologyDescription": "<TopologyDescription id: 6a1581a9cc23930734b05c7f, topology_type: Single, servers: [<ServerDescription ('157.20.51.194', 27017) server_type: Standalone, rtt: 0.04144431143926341>]>", "clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:29,058 - [36mDEBUG[0m pymongo.connection - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Connection checkout started", "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:29,058 - [36mDEBUG[0m pymongo.connection - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Connection checked out", "serverHost": "157.20.51.194", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 0.00013634700007969514} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:29,058 - [36mDEBUG[0m pymongo.command - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Command started", "command": "{\"insert\": \"history_messages\", \"ordered\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"w2/WH+23TwWJIVAz64OHNA==\", \"subType\": \"04\"}}}, \"$db\": \"ai-agnet\", \"documents\": [{\"history_master_id\": {\"$oid\": \"6a1581a9cc23930734b05c80\"}, \"human\": \"Hello, is this working now?\", \"agent\": \"Yes, it's working! How can I assist you today?\", \"input_tokens\": 7, \"output_tokens\": 13, \"response_time\": \"2.05\", \"created_at\": {\"$date\": \"2026-05-26T11:19:29.056Z\"}, \"_id\": {\"$oid\": \"6a1581c1cc23930734b05c81\"}}]}", "commandName": "insert", "databaseName": "ai-agnet", "requestId": 656515905, "operationId": 656515905, "driverConnectionId": 1, "serverConnectionId": 23244, "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:29,109 - [36mDEBUG[0m pymongo.command - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Command succeeded", "durationMS": 51.425, "reply": "{\"n\": 1, \"ok\": 1.0}", "commandName": "insert", "databaseName": "ai-agnet", "requestId": 656515905, "operationId": 656515905, "driverConnectionId": 1, "serverConnectionId": 23244, "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:29,110 - [36mDEBUG[0m pymongo.connection - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Connection checked in", "serverHost": "157.20.51.194", "serverPort": 27017, "driverConnectionId": 1} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:29,111 - [36mDEBUG[0m pymongo.serverSelection - {"message": "Server selection started", "selector": "<function writable_server_selector at 0x7a9be19f9300>", "operation": "update", "topologyDescription": "<TopologyDescription id: 6a1581a9cc23930734b05c7f, topology_type: Single, servers: [<ServerDescription ('157.20.51.194', 27017) server_type: Standalone, rtt: 0.04144431143926341>]>", "clientId": {"$oid": "6a1581a9cc23930734b05c7f"}} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:29,111 - [36mDEBUG[0m pymongo.serverSelection - {"message": "Server selection succeeded", "selector": "<function writable_server_selector at 0x7a9be19f9300>", "operation": "update", "topologyDescription": "<TopologyDescription id: 6a1581a9cc23930734b05c7f, topology_type: Single, servers: [<ServerDescription ('157.20.51.194', 27017) server_type: Standalone, rtt: 0.04144431143926341>]>", "clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:29,111 - [36mDEBUG[0m pymongo.connection - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Connection checkout started", "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:29,111 - [36mDEBUG[0m pymongo.connection - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Connection checked out", "serverHost": "157.20.51.194", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 0.00012057799904141575} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:29,112 - [36mDEBUG[0m pymongo.command - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Command started", "command": "{\"update\": \"history_masters\", \"ordered\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"w2/WH+23TwWJIVAz64OHNA==\", \"subType\": \"04\"}}}, \"$db\": \"ai-agnet\", \"updates\": [{\"q\": {\"_id\": {\"$oid\": \"6a1581a9cc23930734b05c80\"}}, \"u\": {\"$inc\": {\"llm_token\": 20}}}]}", "commandName": "update", "databaseName": "ai-agnet", "requestId": 1136614946, "operationId": 1136614946, "driverConnectionId": 1, "serverConnectionId": 23244, "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:29,162 - [36mDEBUG[0m pymongo.command - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Command succeeded", "durationMS": 50.262, "reply": "{\"n\": 1, \"nModified\": 1, \"ok\": 1.0}", "commandName": "update", "databaseName": "ai-agnet", "requestId": 1136614946, "operationId": 1136614946, "driverConnectionId": 1, "serverConnectionId": 23244, "serverHost": "157.20.51.194", "serverPort": 27017} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:29,162 - [36mDEBUG[0m pymongo.connection - {"clientId": {"$oid": "6a1581a9cc23930734b05c7f"}, "message": "Connection checked in", "serverHost": "157.20.51.194", "serverPort": 27017, "driverConnectionId": 1} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:35,927 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "driverConnectionId": 1, "serverConnectionId": 23242, "serverHost": "157.20.51.194", "serverPort": 27017, "awaited": true, "durationMS": 9925.993362001464, "reply": "{\"isWritablePrimary\": true, \"topologyVersion\": {\"processId\": {\"$oid\": \"696e15e23608b0816d01ca77\"}}, \"maxBsonObjectSize\": 16777216, \"maxMessageSizeBytes\": 48000000, \"maxWriteBatchSize\": 100000, \"localTime\": {\"$date\": \"2026-05-26T11:22:54.478Z\"}, \"logicalSessionTimeoutMinutes\": 30, \"connectionId\": 23242, \"maxWireVersion\": 17, \"ok\": 1.0}", "message": "Server heartbeat succeeded"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:35,928 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "driverConnectionId": 1, "serverConnectionId": 23242, "serverHost": "157.20.51.194", "serverPort": 27017, "awaited": true, "message": "Server heartbeat started"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:45,942 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "driverConnectionId": 1, "serverConnectionId": 23242, "serverHost": "157.20.51.194", "serverPort": 27017, "awaited": true, "durationMS": 10014.391176999197, "reply": "{\"isWritablePrimary\": true, \"topologyVersion\": {\"processId\": {\"$oid\": \"696e15e23608b0816d01ca77\"}}, \"maxBsonObjectSize\": 16777216, \"maxMessageSizeBytes\": 48000000, \"maxWriteBatchSize\": 100000, \"localTime\": {\"$date\": \"2026-05-26T11:23:04.488Z\"}, \"logicalSessionTimeoutMinutes\": 30, \"connectionId\": 23242, \"maxWireVersion\": 17, \"ok\": 1.0}", "message": "Server heartbeat succeeded"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:45,943 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "driverConnectionId": 1, "serverConnectionId": 23242, "serverHost": "157.20.51.194", "serverPort": 27017, "awaited": true, "message": "Server heartbeat started"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:55,998 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "driverConnectionId": 1, "serverConnectionId": 23242, "serverHost": "157.20.51.194", "serverPort": 27017, "awaited": true, "durationMS": 10054.663969000103, "reply": "{\"isWritablePrimary\": true, \"topologyVersion\": {\"processId\": {\"$oid\": \"696e15e23608b0816d01ca77\"}}, \"maxBsonObjectSize\": 16777216, \"maxMessageSizeBytes\": 48000000, \"maxWriteBatchSize\": 100000, \"localTime\": {\"$date\": \"2026-05-26T11:23:14.499Z\"}, \"logicalSessionTimeoutMinutes\": 30, \"connectionId\": 23242, \"maxWireVersion\": 17, \"ok\": 1.0}", "message": "Server heartbeat succeeded"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:49:55,999 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "driverConnectionId": 1, "serverConnectionId": 23242, "serverHost": "157.20.51.194", "serverPort": 27017, "awaited": true, "message": "Server heartbeat started"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:50:06,012 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "driverConnectionId": 1, "serverConnectionId": 23242, "serverHost": "157.20.51.194", "serverPort": 27017, "awaited": true, "durationMS": 10012.572194002132, "reply": "{\"isWritablePrimary\": true, \"topologyVersion\": {\"processId\": {\"$oid\": \"696e15e23608b0816d01ca77\"}}, \"maxBsonObjectSize\": 16777216, \"maxMessageSizeBytes\": 48000000, \"maxWriteBatchSize\": 100000, \"localTime\": {\"$date\": \"2026-05-26T11:23:24.509Z\"}, \"logicalSessionTimeoutMinutes\": 30, \"connectionId\": 23242, \"maxWireVersion\": 17, \"ok\": 1.0}", "message": "Server heartbeat succeeded"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:50:06,013 - [36mDEBUG[0m pymongo.topology - {"topologyId": {"$oid": "6a1581a9cc23930734b05c7f"}, "driverConnectionId": 1, "serverConnectionId": 23242, "serverHost": "157.20.51.194", "serverPort": 27017, "awaited": true, "message": "Server heartbeat started"} [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:50:08,710 - [32mINFO[0m livekit.agents - process exiting [90m{"reason": "", "pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:50:08,709 - [36mDEBUG[0m livekit.agents - shutting down job task [90m{"reason": "", "user_initiated": false, "pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:50:08,718 - [36mDEBUG[0m livekit.agents - http_session(): closing the httpclient ctx [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+2026-05-26 16:50:08,718 - [36mDEBUG[0m livekit.agents - http_session(): creating a new httpclient ctx [90m{"pid": 46703, "job_id": "AJ_eWbEDURdsQzi"}[0m
+Connected to the LiveKit room id: "AJ_eWbEDURdsQzi"
+room {
+  sid: "RM_qmCePwLiyAJ2"
+  name: "chat-test-room"
+  empty_timeout: 300
+  creation_time: 1779794335
+  enabled_codecs {
+    mime: "video/H264"
+  }
+  enabled_codecs {
+    mime: "video/VP8"
+  }
+  enabled_codecs {
+    mime: "video/VP9"
+  }
+  enabled_codecs {
+    mime: "video/AV1"
+  }
+  enabled_codecs {
+    mime: "audio/red"
+  }
+  enabled_codecs {
+    mime: "audio/opus"
+  }
+  enabled_codecs {
+    mime: "audio/PCMU"
+  }
+  enabled_codecs {
+    mime: "audio/PCMA"
+  }
+  version {
+    unix_micro: 1779794335847988
+  }
+  departure_timeout: 20
+  creation_time_ms: 1779794335671
+}
+agent_name: "chat-agent"
+state {
+  status: JS_RUNNING
+  started_at: 1779794337143147745
+  updated_at: 1779794337143147745
+  participant_identity: "agent_KNvPtEN22d6q"
+  worker_id: "AW_rtfGZjFentvb"
+  agent_id: "A_uX42tkWa2mkq"
+}
+dispatch_id: "AD_mL8L9L83LwU2"
+
+[ForkSafeDatabase] Initializing client for PID 46703 and Loop <_UnixSelectorEventLoop running=True closed=False debug=False>
+Created chat history master record with ID: 6a1581a9cc23930734b05c80
+Using default fallback agent configuration
+Chat agent is ready and listening for messages...
+[DEBUG] data_received event. Topic: lk-chat-topic, Sender: WebClient
+Received message from participant: Hello, is this working now?
+Streaming finished. Final reply: Yes, it's working! How can I assist you today?
+2026-05-26 20:59:03,745 - [33mWARNING[0m livekit.agents - unexpected message type: 258 [90m[0m
+2026-05-26 20:59:03,746 - [33mWARNING[0m livekit.agents - failed to connect to livekit, retrying in 0s [90m[0m
+Traceback (most recent call last):
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 689, in _connection_task
+    await self._run_ws(ws)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 770, in _run_ws
+    await asyncio.gather(*tasks)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 742, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+2026-05-26 20:59:04,179 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_ycLXvUePJVQV", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
+2026-05-26 22:25:05,479 - [33mWARNING[0m livekit.agents - unexpected message type: 258 [90m[0m
+2026-05-26 22:25:05,480 - [33mWARNING[0m livekit.agents - failed to connect to livekit, retrying in 0s [90m[0m
+Traceback (most recent call last):
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 689, in _connection_task
+    await self._run_ws(ws)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 770, in _run_ws
+    await asyncio.gather(*tasks)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 742, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+2026-05-26 22:25:05,556 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_Af9WTmtkLXKk", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
+2026-05-26 23:48:48,285 - [33mWARNING[0m livekit.agents - unexpected message type: 258 [90m[0m
+2026-05-26 23:48:48,285 - [33mWARNING[0m livekit.agents - failed to connect to livekit, retrying in 0s [90m[0m
+Traceback (most recent call last):
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 689, in _connection_task
+    await self._run_ws(ws)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 770, in _run_ws
+    await asyncio.gather(*tasks)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 742, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+2026-05-26 23:48:48,363 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_guffinXXoLep", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
+2026-05-27 00:09:02,019 - [33mWARNING[0m livekit.agents - unexpected message type: 258 [90m[0m
+2026-05-27 00:09:02,020 - [33mWARNING[0m livekit.agents - failed to connect to livekit, retrying in 0s [90m[0m
+Traceback (most recent call last):
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 689, in _connection_task
+    await self._run_ws(ws)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 770, in _run_ws
+    await asyncio.gather(*tasks)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 742, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+2026-05-27 00:09:02,092 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_NiRXUFchfWUp", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
+2026-05-27 00:53:19,165 - [33mWARNING[0m livekit.agents - unexpected message type: 258 [90m[0m
+2026-05-27 00:53:19,166 - [33mWARNING[0m livekit.agents - failed to connect to livekit, retrying in 0s [90m[0m
+Traceback (most recent call last):
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 689, in _connection_task
+    await self._run_ws(ws)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 770, in _run_ws
+    await asyncio.gather(*tasks)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 742, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+2026-05-27 00:53:19,244 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_RGavEahqVyDY", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
+2026-05-27 09:27:11,431 - [33mWARNING[0m livekit.agents - unexpected message type: 258 [90m[0m
+2026-05-27 09:27:11,432 - [33mWARNING[0m livekit.agents - failed to connect to livekit, retrying in 0s [90m[0m
+Traceback (most recent call last):
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 689, in _connection_task
+    await self._run_ws(ws)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 770, in _run_ws
+    await asyncio.gather(*tasks)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 742, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+2026-05-27 09:27:11,826 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_2zuz64depo6P", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
+2026-05-27 10:46:17,768 - [33mWARNING[0m livekit.agents - unexpected message type: 258 [90m[0m
+2026-05-27 10:46:17,769 - [33mWARNING[0m livekit.agents - failed to connect to livekit, retrying in 0s [90m[0m
+Traceback (most recent call last):
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 689, in _connection_task
+    await self._run_ws(ws)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 770, in _run_ws
+    await asyncio.gather(*tasks)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 742, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+2026-05-27 10:46:17,864 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_GuQe7Hk5AyXW", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
+2026-05-27 11:58:36,331 - [33mWARNING[0m livekit.agents - unexpected message type: 258 [90m[0m
+2026-05-27 11:58:36,332 - [33mWARNING[0m livekit.agents - failed to connect to livekit, retrying in 0s [90m[0m
+Traceback (most recent call last):
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 689, in _connection_task
+    await self._run_ws(ws)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 770, in _run_ws
+    await asyncio.gather(*tasks)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 742, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+2026-05-27 11:58:38,628 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_zJH9MNq3QD4U", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
+2026-05-27 18:51:55,186 - [33mWARNING[0m livekit.agents - unexpected message type: 258 [90m[0m
+2026-05-27 18:51:55,187 - [33mWARNING[0m livekit.agents - failed to connect to livekit, retrying in 0s [90m[0m
+Traceback (most recent call last):
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 689, in _connection_task
+    await self._run_ws(ws)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 770, in _run_ws
+    await asyncio.gather(*tasks)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 742, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+2026-05-27 18:51:55,336 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_fakhnygFpC9g", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
+2026-05-27 21:18:16,885 - [33mWARNING[0m livekit.agents - unexpected message type: 258 [90m[0m
+2026-05-27 21:18:16,886 - [33mWARNING[0m livekit.agents - failed to connect to livekit, retrying in 0s [90m[0m
+Traceback (most recent call last):
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 689, in _connection_task
+    await self._run_ws(ws)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 770, in _run_ws
+    await asyncio.gather(*tasks)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 742, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+2026-05-27 21:18:16,968 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_L5WqEkXduNxk", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
+2026-05-27 22:33:22,218 - [32mINFO[0m livekit.agents - shutting down worker [90m{"id": "AW_L5WqEkXduNxk"}[0m
+2026-05-27 22:33:27,779 - [36mDEBUG[0m asyncio - Using selector: EpollSelector [90m[0m
+2026-05-27 22:33:27,783 - [32mINFO[0m livekit.agents - starting worker [90m{"version": "1.2.6", "rtc-version": "1.1.8"}[0m
+2026-05-27 22:33:27,783 - [32mINFO[0m livekit.agents - preloading plugins [90m{"packages": ["livekit.plugins.openai", "livekit.plugins.deepgram", "livekit.plugins.silero", "livekit.plugins.langchain", "av"]}[0m
+2026-05-27 22:33:27,880 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_wSY2jCfuyALB", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
+2026-05-27 22:37:35,708 - [32mINFO[0m livekit.agents - shutting down worker [90m{"id": "AW_wSY2jCfuyALB"}[0m
+2026-05-27 22:37:40,946 - [36mDEBUG[0m asyncio - Using selector: EpollSelector [90m[0m
+2026-05-27 22:37:40,951 - [32mINFO[0m livekit.agents - starting worker [90m{"version": "1.2.6", "rtc-version": "1.1.8"}[0m
+2026-05-27 22:37:40,951 - [32mINFO[0m livekit.agents - preloading plugins [90m{"packages": ["livekit.plugins.openai", "livekit.plugins.deepgram", "livekit.plugins.silero", "livekit.plugins.langchain", "av"]}[0m
+2026-05-27 22:37:41,029 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_xi59pAQbDnKg", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
+2026-05-27 22:37:55,144 - [32mINFO[0m livekit.agents - shutting down worker [90m{"id": "AW_xi59pAQbDnKg"}[0m
+2026-05-27 22:38:00,315 - [36mDEBUG[0m asyncio - Using selector: EpollSelector [90m[0m
+2026-05-27 22:38:00,319 - [32mINFO[0m livekit.agents - starting worker [90m{"version": "1.2.6", "rtc-version": "1.1.8"}[0m
+2026-05-27 22:38:00,319 - [32mINFO[0m livekit.agents - preloading plugins [90m{"packages": ["livekit.plugins.openai", "livekit.plugins.deepgram", "livekit.plugins.silero", "livekit.plugins.langchain", "av"]}[0m
+2026-05-27 22:38:00,403 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_93RU9uGreDam", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
+2026-05-27 22:38:03,045 - [32mINFO[0m livekit.agents - shutting down worker [90m{"id": "AW_93RU9uGreDam"}[0m
+2026-05-27 22:38:08,295 - [36mDEBUG[0m asyncio - Using selector: EpollSelector [90m[0m
+2026-05-27 22:38:08,299 - [32mINFO[0m livekit.agents - starting worker [90m{"version": "1.2.6", "rtc-version": "1.1.8"}[0m
+2026-05-27 22:38:08,299 - [32mINFO[0m livekit.agents - preloading plugins [90m{"packages": ["livekit.plugins.openai", "livekit.plugins.deepgram", "livekit.plugins.silero", "livekit.plugins.langchain", "av"]}[0m
+2026-05-27 22:38:08,382 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_8N6N4N5QiVAA", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
+2026-05-27 22:38:30,701 - [32mINFO[0m livekit.agents - shutting down worker [90m{"id": "AW_8N6N4N5QiVAA"}[0m
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/usr/lib/python3.12/multiprocessing/spawn.py", line 244, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/usr/lib/python3.12/multiprocessing/spawn.py", line 268, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 226, in run_module
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/src/agents/main.py", line 8, in <module>
+    from livekit.agents import cli, WorkerOptions
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/__init__.py", line 23, in <module>
+    from . import cli, ipc, llm, metrics, stt, tokenize, tts, utils, vad, voice  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/cli/__init__.py", line 1, in <module>
+    from .cli import run_app
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/cli/cli.py", line 3, in <module>
+    import click
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/click/__init__.py", line 10, in <module>
+    from .core import Argument as Argument
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/click/core.py", line 23, in <module>
+    from . import types
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 921, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 819, in module_from_spec
+  File "<frozen importlib._bootstrap>", line 798, in _init_module_attrs
+  File "<frozen importlib._bootstrap>", line 638, in cached
+  File "<frozen importlib._bootstrap_external>", line 614, in _get_cached
+  File "<frozen importlib._bootstrap_external>", line 508, in cache_from_source
+  File "<frozen importlib._bootstrap_external>", line 134, in _path_split
+  File "<frozen importlib._bootstrap_external>", line 134, in <genexpr>
+KeyboardInterrupt
+2026-05-27 22:38:36,084 - [36mDEBUG[0m asyncio - Using selector: EpollSelector [90m[0m
+2026-05-27 22:38:36,087 - [32mINFO[0m livekit.agents - starting worker [90m{"version": "1.2.6", "rtc-version": "1.1.8"}[0m
+2026-05-27 22:38:36,087 - [32mINFO[0m livekit.agents - preloading plugins [90m{"packages": ["livekit.plugins.openai", "livekit.plugins.deepgram", "livekit.plugins.silero", "livekit.plugins.langchain", "av"]}[0m
+2026-05-27 22:38:36,190 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_UDuZxJg4pPQs", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
+2026-05-27 23:23:18,602 - [32mINFO[0m livekit.agents - shutting down worker [90m{"id": "AW_UDuZxJg4pPQs"}[0m
+2026-05-27 23:23:23,929 - [36mDEBUG[0m asyncio - Using selector: EpollSelector [90m[0m
+2026-05-27 23:23:23,933 - [32mINFO[0m livekit.agents - starting worker [90m{"version": "1.2.6", "rtc-version": "1.1.8"}[0m
+2026-05-27 23:23:23,933 - [32mINFO[0m livekit.agents - preloading plugins [90m{"packages": ["livekit.plugins.openai", "livekit.plugins.deepgram", "livekit.plugins.silero", "livekit.plugins.langchain", "av"]}[0m
+2026-05-27 23:23:24,027 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_WZkK9nQz5paP", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
+2026-05-28 03:23:16,557 - [33mWARNING[0m livekit.agents - unexpected message type: 258 [90m[0m
+2026-05-28 03:23:16,604 - [33mWARNING[0m livekit.agents - failed to connect to livekit, retrying in 0s [90m[0m
+Traceback (most recent call last):
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 689, in _connection_task
+    await self._run_ws(ws)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 770, in _run_ws
+    await asyncio.gather(*tasks)
+  File "/home/jawahar/Documents/study/hi_tech/ai-agent/livekit_study/livekit_agent/venv/lib/python3.12/site-packages/livekit/agents/worker.py", line 742, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+2026-05-28 03:23:16,804 - [32mINFO[0m livekit.agents - registered worker [90m{"id": "AW_fygNeBoqPcNn", "url": "wss://callagent-24n26x9y.livekit.cloud", "region": "India South", "protocol": 17}[0m
