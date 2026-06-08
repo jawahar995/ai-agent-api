@@ -1,0 +1,12 @@
+# Python virtual environment
+venv/*
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Log files
+chat_worker.log
+
+frontend
+Qdrant_storage
